@@ -21,4 +21,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Thank you to Kevin for helping me brianstorm this idea out and for guidance as I asked for help.
-\
