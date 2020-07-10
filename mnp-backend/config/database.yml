@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: mnp-backend_development
+  host: localhost
+  user: mnp-database
+  password: mnpapi4117
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: mnp-backend_test
+  host: localhost
+  user: mnp-database
+  password: mnpapi4117
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,3 +89,8 @@ production:
   database: mnp-backend_production
   username: mnp-backend
   password: <%= ENV['MNP-BACKEND_DATABASE_PASSWORD'] %>
+  
+
+  # host: <%= Rails.application.credentials.dig(:development, :host_server) %>
+  # user: <%= Rails.application.credentials.dig(:development, :postgres_username) %>
+  # password:  <%= Rails.application.credentials.dig(:development, :postgres_password) %>
