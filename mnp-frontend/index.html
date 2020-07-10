@@ -2,9 +2,144 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Mood N Progress</title>
+    <!-- 
   </head>
   <body>
+    <div class="container">
+      <h1>Mood N Progress</h1>
+      <form id="new-user-form">
+        <input type="test"/>
+        <input type="submit"/>
+      </form>
+      <div id="user-container">
+
+      </div>
+    </div>
     <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
   </body>
-</html>
+</html> -->
+
+<div class="wrapper">
+
+  <!-- Calendar Main -->
+  <main>
+    <div class="toolbar">
+      <div class="toggle">
+        <div class="toggle__option">week</div>
+        <div class="toggle__option toggle__option--selected">month</div>
+      </div>
+      <div class="current-month">Month 2020</div>
+      <div class="search-input">
+        <input type="text" value="Find by date...">
+        <input type="submit">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="calendar__header">
+        <div>mon</div>
+        <div>tue</div>
+        <div>wed</div>
+        <div>thu</div>
+        <div>fri</div>
+        <div>sat</div>
+        <div>sun</div>
+      </div>
+      <div class="calendar_row one">
+        <div class="calendar_block mon"> </div>
+        <div class="calendar_block tue"> </div>
+        <div class="calendar_block wed"> </div>
+        <div class="calendar_block thu"> </div>
+        <div class="calendar_block fri"> </div>
+        <div class="calendar_block sat"> </div>
+        <div class="calendar_block sun"> </div>
+      </div>
+      <div class="calendar_row two">
+        <div class="calendar_block mon"> </div>
+        <div class="calendar_block tue"> </div>
+        <div class="calendar_block wed"> </div>
+        <div class="calendar_block thu"> </div>
+        <div class="calendar_block fri"> </div>
+        <div class="calendar_block sat"> </div>
+        <div class="calendar_block sun"> </div>       
+      </div>
+      <div class="calendar_row three">
+        <div class="calendar_block mon"> </div>
+        <div class="calendar_block tue"> </div>
+        <div class="calendar_block wed"> </div>
+        <div class="calendar_block thu"> </div>
+        <div class="calendar_block fri"> </div>
+        <div class="calendar_block sat"> </div>
+        <div class="calendar_block sun"> </div>  
+      </div>
+      <div class="calendar_row four">
+        <div class="calendar_block mon"> </div>
+        <div class="calendar_block tue"> </div>
+        <div class="calendar_block wed"> </div>
+        <div class="calendar_block thu"> </div>
+        <div class="calendar_block fri"> </div>
+        <div class="calendar_block sat"> </div>
+        <div class="calendar_block sun"> </div>
+      </div>
+      <div class="calendar_row five">
+        <div class="calendar_block mon"> </div>
+        <div class="calendar_block tue"> </div>
+        <div class="calendar_block wed"> </div>
+        <div class="calendar_block thu"> </div>
+        <div class="calendar_block fri"> </div>
+        <div class="calendar_block sat"> </div>
+        <div class="calendar_block sun"> </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- sidebar -->
+  <sidebar>
+    <div class="logo">Mood N Progress</div>
+    <div class="avatar">
+      <div class="avatar__img">
+        <img src="https://picsum.photos/70" alt="avatar">
+      </div>
+      <div class="avatar__name">Name</div>
+    </div>
+    <nav class="menu">
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-home"></i>
+        <span class="menu__text">Overview</span>
+      </a>
+      <a class="menu__item menu__item--active" href="#">
+        <i class="menu__icon fa fa-calendar"></i>
+        <span class="menu__text">Calendar</span>
+      </a>
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-goals"></i>
+        <span class="menu__text">Goals</span>
+      </a>
+      <a class="menu__item " href="#">
+        <i class="menu__icon fa fa-profiles"></i>
+        <span class="menu__text">Profiles</span>
+      </a>
+      <div class="entry_types">Entry types</div>
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-bar-activites"></i>
+        <span class="menu__text">Activites</span>
+      </a>
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-meals"></i>
+        <span class="menu__text">Meals</span>
+      </a>
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-moods"></i>
+        <span class="menu__text">Moods</span>
+      </a>
+      <a class="menu__item" href="#">
+        <i class="menu__icon fa fa-sleep"></i>
+        <span class="menu__text">Sleep</span>
+      </a>
+    </nav>
+  </sidebar>
+
+
+</div>
