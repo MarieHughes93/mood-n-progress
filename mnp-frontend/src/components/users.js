@@ -1,14 +1,23 @@
 class Users{
     constructor(){
         this.users = []
-        this.adaptor = new UsersAdapter()
+        this.adapter = new UsersAdapter()
         // this.bindEventListners()
         this.fetchAndLoadUsers()
     }
 
     fetchAndLoadUsers(){
-        this.adaptor.getUsers().then(users => {
-            console.log(users)
+        this.adapter
+        .getUsers()
+        .then(users => {
+            return console.log(users)
         })
+        .then(()=>{
+            this.render()
+        }) 
+    }
+
+    render(){
+        console.log('rendering..')
     }
 }
