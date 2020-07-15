@@ -1,6 +1,6 @@
 # MoodNProgress
 
-Do you ever feel like you wish you had more knowledge on how things affect you? How much sleep we get, the food we eat, and the activities we participate in can have negative and positive effects. Use MoodNProgress to document behavior, activites, and meals. Track your activities to see if you have any correlations in your behavior and how your mood has been. 
+Do you ever feel like you wish you had more knowledge on how things affect you? How much sleep we get, the food we eat, and the activities we participate in can have negative and positive effects. Use MoodNProgress to document behavior, activites, and meals. Track your activities to see if you have any correlations in your behavior and how your mood has been.  A Rails API with a Modular Javascript frontend.
 
 ## Prerequisites & Installing
 

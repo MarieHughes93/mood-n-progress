@@ -2,15 +2,19 @@ class Users{
     constructor(){
         this.users = []
         this.adapter = new UsersAdapter()
-        // this.bindEventListners()
+        this.initBindingAndEventListners()
         this.fetchAndLoadUsers()
+    }
+    initBindingAndEventListners(){
+        this.usersContainer = document.getElementById('users-container')
     }
 
     fetchAndLoadUsers(){
         this.adapter
         .getUsers()
         .then(users => {
-            return console.log(users)
+            users.forEach(user => this.users.push(new User(user)))
+            console.log(this.users)
         })
         .then(()=>{
             this.render()
@@ -18,6 +22,6 @@ class Users{
     }
 
     render(){
-        console.log('rendering..')
+        this.usersContainer.innerHTML = this.users.map(user => user.renderLi()).join('')
     }
 }

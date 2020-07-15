@@ -142,6 +142,13 @@ sidebar {
   padding: 16px;
 }
 
+.layout{
+    margin: auto;
+    width: 95%;
+    height: 750px;
+    background-color: white;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+}
 
 
 

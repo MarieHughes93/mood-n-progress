@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>Mood N Progress</title>
     </head>
@@ -10,73 +10,15 @@
 
   <!-- Calendar Main -->
   <main>
-    <div class="toolbar">
-      <div class="toggle">
-        <div class="toggle__option">week</div>
-        <div class="toggle__option toggle__option--selected">month</div>
-      </div>
-      <div class="current-month">Month 2020</div>
-      <!-- extra goal for search bar -->
-      <!-- <div class="search-input">
-        <input type="text" value="Find by date...">
-        <input type="submit">
-        <i class="fa fa-search"></i>
-      </div> -->
-    </div>
-    <div class="calendar">
-      <div class="calendar__header">
-        <div>mon</div>
-        <div>tue</div>
-        <div>wed</div>
-        <div>thu</div>
-        <div>fri</div>
-        <div>sat</div>
-        <div>sun</div>
-      </div>
-      <div class="calendar_row one">
-        <div class="calendar_block mon"> </div>
-        <div class="calendar_block tue"> </div>
-        <div class="calendar_block wed"> </div>
-        <div class="calendar_block thu"> </div>
-        <div class="calendar_block fri"> </div>
-        <div class="calendar_block sat"> </div>
-        <div class="calendar_block sun"> </div>
-      </div>
-      <div class="calendar_row two">
-        <div class="calendar_block mon"> </div>
-        <div class="calendar_block tue"> </div>
-        <div class="calendar_block wed"> </div>
-        <div class="calendar_block thu"> </div>
-        <div class="calendar_block fri"> </div>
-        <div class="calendar_block sat"> </div>
-        <div class="calendar_block sun"> </div>       
-      </div>
-      <div class="calendar_row three">
-        <div class="calendar_block mon"> </div>
-        <div class="calendar_block tue"> </div>
-        <div class="calendar_block wed"> </div>
-        <div class="calendar_block thu"> </div>
-        <div class="calendar_block fri"> </div>
-        <div class="calendar_block sat"> </div>
-        <div class="calendar_block sun"> </div>  
-      </div>
-      <div class="calendar_row four">
-        <div class="calendar_block mon"> </div>
-        <div class="calendar_block tue"> </div>
-        <div class="calendar_block wed"> </div>
-        <div class="calendar_block thu"> </div>
-        <div class="calendar_block fri"> </div>
-        <div class="calendar_block sat"> </div>
-        <div class="calendar_block sun"> </div>
-      </div>
-      <div class="calendar_row five">
-        <div class="calendar_block mon"> </div>
-        <div class="calendar_block tue"> </div>
-        <div class="calendar_block wed"> </div>
-        <div class="calendar_block thu"> </div>
-        <div class="calendar_block fri"> </div>
-        <div class="calendar_block sat"> </div>
-        <div class="calendar_block sun"> </div>
+    <div class="layout">
+      <div class="entry_types">Users</div>
+      <div id="users-container">
+        <ul id="users-container">
+
+        </ul>
+        <div id="user-show">
+
+        </div>
       </div>
     </div>
   </main>
@@ -123,9 +65,10 @@
       </a>
     </nav>
   </sidebar>
-  <script type="application/javascript" src="src/components/app.js" charset="UTF-8"></script>
-  <script type="application/javascript" src="src/components/users.js" charset="UTF-8"></script>
-  <script type="application/javascript" src="src/adapters/UsersAdapter.js" charset="UTF-8"></script>
-  <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="src\components\user.js"></script>
+  <script src="src/components/users.js"></script>
+  <script src="src/components/app.js"></script>
+  <script src="src/adapters/UsersAdapter.js"></script>
+  <script src="src/index.js"></script>
 </html>
 </div>
