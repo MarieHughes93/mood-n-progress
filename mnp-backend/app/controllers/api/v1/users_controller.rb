@@ -1,11 +1,11 @@
 class Api::V1::UsersController < ApplicationController
     def index
-        users = User.all
-        render json: users, status: 200
+        @users = User.all
+        render json: user, status: 200
     end
     def show
-        user = User.find(params[:id])
-        render json: users, status: 200
+        @user = User.find(params[:id])
+        render json: user, status: 200
     end
     def create
         # user = User.new(user_params)
@@ -14,8 +14,8 @@ class Api::V1::UsersController < ApplicationController
         # else
         #     render plain: "There was an issue. Add Errors later"
         # end
-        user = User.create(user_params)
-        render json: users, status: 200
+        @user = User.create(user_params)
+        render json: @user, status: 200
     end
     def update
         # user = User.find(user_params)
@@ -24,9 +24,9 @@ class Api::V1::UsersController < ApplicationController
         # else
         #     render plain: "There was an issue. Add Errors later"
         # end
-        user = User.find(params[:id])
-        user.update(user_params)
-        render json: users, status: 200
+        @user = User.find(params[:id])
+        @user.update(user_params)
+        render json: @user, status: 200
     end
     def destroy
          # user = User.find(user_params)
@@ -35,8 +35,8 @@ class Api::V1::UsersController < ApplicationController
         # else
         #     render plain: "There was an issue. Add Errors later"
         # end
-        user = User.find(params[:id])
-        user.delete
+        @user = User.find(params[:id])
+        @user.delete
         render json: {userId: user.id}
     end
     private
