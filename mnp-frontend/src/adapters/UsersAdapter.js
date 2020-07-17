@@ -3,7 +3,8 @@ class UsersAdapter {
     constructor(){
         this.baseUrl = 
         'http://localhost:3000/api/v1/users'
-    }
+        this.loginUrl
+        }
 
     getUsers(){
         return fetch(this.baseUrl).then(res => res.json()
@@ -23,4 +24,21 @@ class UsersAdapter {
             body: JSON.stringify({user}),
         }).then(res=> res.json())
     }
+
+    login(value) {
+        const user = {
+            name: value,
+            email: value,
+            password: value,
+        }
+        return fetch(this.loginUrl,{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify({user}),
+        }).then(res=> res.json())
+        
+    }
 }
+
