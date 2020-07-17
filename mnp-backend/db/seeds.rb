@@ -13,9 +13,9 @@ users = []
     User.create do |u|
         u.name = Faker::GreekPhilosophers.name
         u.email = Faker::Internet.email
-        u.password = Faker::Internet.password
+        u.password_digest = Faker::Internet.password
         users << u
     end
 end
 
-test = User.create(name: "Cho", email: "test@test.com", password: "test")
+test = User.create(name: "Cho", email: "test@test.com", password_digest: "test")
