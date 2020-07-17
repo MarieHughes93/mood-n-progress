@@ -19,10 +19,12 @@ class App{
         const userName = this.loginUserName.value
         this.adapter.login(userName).then(user=> {
             this.current_user = new User(user)
-            this.UserContainer = document.getElementById('users-container')
-            this.UserContainer.style.display = "none";
+            this.usersContainer = document.getElementById('users-container').style.display = "none";
+            this.notesContainer = document.getElementById('notes-container').style.display = "block";
+            this.noteCreateContainer = document.getElementById('notes-create').style.display = "block";
         })
     }
+    
 
  
 }
