@@ -7,40 +7,70 @@
     </head>
 
 <div class="wrapper">
-
-  <!-- Calendar Main -->
+  <!-- Center Main -->
   <main>
-    <div class="user-container" id="user-container">
-      <div id="user-create">
-        <ul>
-          <form id="user-create-form">Create User
-            <li><input type="text" name="create-user-name" id="user-create-name" placeholder="Name" /></li>
-            <li><input type="text" name="create-user-username" id="user-create-username"placeholder="Username"/></li>
-            <input type="submit"/>
-          </form>
-        </ul>
-      </div>
-      <div id="user-login">
-        <ul>
-          <form id="user-login-form">Login
-            <li><input type="text" name="user-username" id="user-login-username"placeholder="Username"/></li>
-            <input type="submit"/>
-          </form>
-        </ul>
-      </div>
-      <div id="user-edit">
-        <ul>
-          <form id="user-edit-form" >Edit
-            <li><input type="text" name="edit-user-name" id="user-update-name" placeholder="Name" /></li>
-            <li><input type="text" name="edit-user-username" id="user-update-username"placeholder="Username"/></li>
-            <input type="submit"/>
-          </form>
-        </ul>
-      </div>
-  </main>
+    <div class="center-layout" id="center-layout" >
+      <div class="users-container" id="users-container"style="display: block;">
+        <div id="users-login"style="display: block;">
+          <ul>
+            <form id="user-login-form">Login
+              <li><input type="text" name="user-username" id="user-login-username"placeholder="Username"/></li>
+              <input type="submit"/>
+            </form>
+          </ul>
+        </div>
+        <div id="users-create"style="display: block;">
+          <ul>
+            <form id="user-create-form">Create User
+              <li><input type="text" name="create-user-name" id="user-create-name" placeholder="Name" /></li>
+              <li><input type="text" name="create-user-username" id="user-create-username"placeholder="Username"/></li>
+              <input type="submit"/>
+            </form>
+          </ul>
+        </div>
+        <div id="users-edit"style="display: none;">
+          <ul>
+            <form id="user-edit-form" >Edit
+              <li><input type="text" name="edit-user-name" id="user-update-name" placeholder="Name" /></li>
+              <li><input type="text" name="edit-user-username" id="user-update-username"placeholder="Username"/></li>
+              <input type="submit"/>
+            </form>
+          </ul>
+        </div>
+        <!-- notes -->
+        <div class="notes-container" id="notes-container"style="display: none;">
+          <div id="notes-create"style="display: block;">
+            <ul>
+              <form id="note-create-form">Create Note
+                <li><input type="text" name="create-note-title" id="note-create-title" placeholder="Title" /></li>
+                <li><input type="text" name="create-note-content" id="note-create-title" placeholder="Content"/></li>
+                <input type="submit"/>
+              </form>
+            </ul>
+          </div>
+          <div id="notes-edit"style="display: none;">
+            <ul>
+              <form id="note-edit-form">Edit Note
+                <li><input type="text" name="edit-note-title" id="note-update-title" placeholder="Title" /></li>
+                <li><input type="text" name="edit-note-content" id="note-update-title" placeholder="Content"/></li>
+                <input type="submit"/>
+              </form>
+            </ul>
+          </div>
+          <div id="notes-destroy"style="display: none;">
+            <ul>
+              <form id="note-destroy-form">Destory Note
+                <li><input type="text" name="delete-note-title" id="note-destroy-title" placeholder="Title" /></li>
+                <li><input type="text" name="delete-note-content" id="note-destory-title" placeholder="Content"/></li>
+                <input type="submit"/>
+              </form>
+            </ul>
+          </div>
+        </div>
+    </main>
 
   <!-- sidebar -->
-  <sidebar>
+    <sidebar>
     <div class="logo">Mood N Progress</div>
     <div class="avatar">
       <div class="avatar__name">Name</div>
