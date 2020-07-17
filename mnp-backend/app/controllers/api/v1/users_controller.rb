@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
         render json: @user, status: 200
     end
     def login
-        @user = User.find_by(email: params[:email])
+        @user = User.find_by(username: params[:username])
         render json: @user
     end
     def create
@@ -45,6 +45,6 @@ class Api::V1::UsersController < ApplicationController
     end
     private
     def user_params
-        params.require(:user).permit(:name,:email,:password)
+        params.require(:user).permit(:name,:username)
     end
 end

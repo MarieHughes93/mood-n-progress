@@ -12,8 +12,7 @@ class UsersAdapter {
     createUser(value) {
         const user = {
             name: value,
-            email: value,
-            password: value,
+            username: value,
         }
         return fetch(this.baseUrl,{
             method: 'POST',
@@ -26,9 +25,9 @@ class UsersAdapter {
 
     login(value) {
         const user = {
-            email: value,
+            username: value,
         }
-        return fetch(this.loginUrl + user.email).then(res=> res.json())
+        return fetch(this.loginUrl + user.username).then(res=> res.json())
     }
 }
 

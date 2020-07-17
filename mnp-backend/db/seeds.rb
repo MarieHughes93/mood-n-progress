@@ -12,10 +12,9 @@ users = []
 10.times do
     User.create do |u|
         u.name = Faker::GreekPhilosophers.name
-        u.email = Faker::Internet.email
-        u.password_digest = Faker::Internet.password
+        u.username = Faker::Internet.unique.username
         users << u
     end
 end
 
-test = User.create(name: "Cho", email: "test@test.com", password_digest: "test")
+test = User.create(name: "Cho", username: "test" )

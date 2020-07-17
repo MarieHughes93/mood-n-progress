@@ -2,9 +2,9 @@ class User{
     constructor(userJSON) {
         this.id = userJSON.id
         this.name = userJSON.name
-        this.email = userJSON.email
+        this.username = userJSON.username
     }
     renderLi() {
-        return `<li>${this.name}</li>`
+        return `<li>${this.username}</li>`
     }
 }
