@@ -6,9 +6,9 @@ class Users{
     }
     
     initBindingAndEventListners(){
-        this.usersContainer = document.getElementById('users-container')
-        this.newUserName = document.getElementById('new-user-name')
-        this.userForm = document.getElementById('new-user-form')
+        this.usersCreateContainer = document.getElementById('users-create')
+        this.newUserName = document.getElementById('user-create-username')
+        this.userForm = document.getElementById('user-create-form')
         this.userForm.addEventListener('submit', this.createUser.bind(this))
     }
     createUser(e){

@@ -8,9 +8,9 @@ class App{
     }
 
     loginListner(){
-        this.loginContainer = document.getElementById('login-container')
-        this.loginUserName = document.getElementById('login-user-username')
-        this.loginForm = document.getElementById('login-form')
+        this.loginContainer = document.getElementById('user-login-form')
+        this.loginUserName = document.getElementById('user-login-username')
+        this.loginForm = document.getElementById('user-login-form')
         // this bind on 14 is for us to be speaking of the app instead of the login form.
         this.loginForm.addEventListener('submit', this.login.bind(this))
     }
@@ -19,12 +19,10 @@ class App{
         const userName = this.loginUserName.value
         this.adapter.login(userName).then(user=> {
             this.current_user = new User(user)
-            this.UserContainer = document.getElementById('user-container')
-            this.UserContainer.innerHTML = '';
+            this.UserContainer = document.getElementById('users-container')
+            this.UserContainer.style.display = "none";
         })
     }
 
  
 }
-
-
