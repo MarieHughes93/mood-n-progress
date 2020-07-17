@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/destroy'
   namespace :api do
     namespace :v1 do
       resources :users
-      resources :sessions, only: [:new, :create, :destroy]
+      post 'signup', to: 'users#create', as: 'signup'
+      get 'login/:email', to: 'users#login', as: 'login'
     end
   end
   
-  get 'signup', to: 'users#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
 end

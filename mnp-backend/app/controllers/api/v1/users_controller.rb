@@ -7,6 +7,10 @@ class Api::V1::UsersController < ApplicationController
         @user = User.find(params[:id])
         render json: @user, status: 200
     end
+    def login
+        @user = User.find_by(email: params[:email])
+        render json: @user
+    end
     def create
         # user = User.new(user_params)
         # if user.save
