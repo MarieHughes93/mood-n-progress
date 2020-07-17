@@ -3,7 +3,6 @@ class Users{
         this.users = []
         this.adapter = new UsersAdapter()
         this.initBindingAndEventListners()
-        this.fetchAndLoadUsers()
     }
     initBindingAndEventListners(){
         this.usersContainer = document.getElementById('users-container')
@@ -24,22 +23,7 @@ class Users{
             this.newUserName.value = ''
             this.newUserEmail.value = ''
             this.newUserPassword.value = ''
-            this.render()
         })
     }
 
-    fetchAndLoadUsers(){
-        this.adapter
-        .getUsers()
-        .then(users => {
-            users.forEach(user => this.users.push(new User(user))) 
-        })
-        .then(()=>{
-            this.render()
-        }) 
-    }
-
-    render(){
-        this.usersContainer.innerHTML = this.users.map(user => user.renderLi()).join('')
-    }
 }
