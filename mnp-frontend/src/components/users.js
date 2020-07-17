@@ -14,7 +14,6 @@ class Users{
         .getUsers()
         .then(users => {
             users.forEach(user => this.users.push(new User(user)))
-            console.log(this.users)
         })
         .then(()=>{
             this.render()

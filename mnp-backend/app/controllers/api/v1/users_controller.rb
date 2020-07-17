@@ -1,11 +1,11 @@
 class Api::V1::UsersController < ApplicationController
     def index
         @users = User.all
-        render json: user, status: 200
+        render json: @users
     end
     def show
         @user = User.find(params[:id])
-        render json: user, status: 200
+        render json: @user, status: 200
     end
     def create
         # user = User.new(user_params)
@@ -37,7 +37,7 @@ class Api::V1::UsersController < ApplicationController
         # end
         @user = User.find(params[:id])
         @user.delete
-        render json: {userId: user.id}
+        render json: {userId: @user.id}
     end
     private
     def user_params
