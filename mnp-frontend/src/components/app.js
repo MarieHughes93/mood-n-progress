@@ -14,6 +14,7 @@ class App{
         // this bind on 14 is for us to be speaking of the app instead of the login form.
         this.loginForm.addEventListener('submit', this.login.bind(this))
     }
+    
     login(e){
         e.preventDefault()
         const userName = this.loginUserName.value
