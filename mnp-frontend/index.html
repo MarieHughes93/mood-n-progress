@@ -11,6 +11,16 @@
   <!-- Calendar Main -->
   <main>
     <div class="layout">
+      <div class="new-note-container">
+        <ul>
+          <form id="new-user-form">Create User
+            <li><input type="text" name="user-name" id="new-user-name" placeholder="Name" /></li>
+            <li><input type="text" name="user-email" id="new-user-email"placeholder="email"/></li>
+            <li><input type="password" name="user-password" id="new-user-password"placeholder="Password"/></li>
+            <input type="submit"/>
+          </form>
+        </ul>
+      </div>
       <div class="entry_types">Users</div>
       <div id="users-container">
         <ul id="users-container">
@@ -30,38 +40,17 @@
       <div class="avatar__name">Name</div>
     </div>
     <nav class="menu">
-      <a class="menu__item" href="#">
+      <a class="menu__item menu__item--active" href="#">
         <i class="menu__icon fa fa-home"></i>
         <span class="menu__text">Overview</span>
       </a>
-      <a class="menu__item menu__item--active" href="#">
-        <i class="menu__icon fa fa-calendar"></i>
-        <span class="menu__text">Calendar</span>
-      </a>
       <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-goals"></i>
-        <span class="menu__text">Goals</span>
+        <i class="menu__icon fa fa-profile"></i>
+        <span class="menu__text">Profile</span>
       </a>
       <a class="menu__item " href="#">
-        <i class="menu__icon fa fa-profiles"></i>
-        <span class="menu__text">Profiles</span>
-      </a>
-      <div class="entry_types">Entry types</div>
-      <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-bar-activites"></i>
-        <span class="menu__text">Activites</span>
-      </a>
-      <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-meals"></i>
-        <span class="menu__text">Meals</span>
-      </a>
-      <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-moods"></i>
-        <span class="menu__text">Moods</span>
-      </a>
-      <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-sleep"></i>
-        <span class="menu__text">Sleep</span>
+        <i class="menu__icon fa fa-notes"></i>
+        <span class="menu__text">Notes</span>
       </a>
     </nav>
   </sidebar>
