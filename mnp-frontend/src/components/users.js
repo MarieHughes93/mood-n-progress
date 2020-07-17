@@ -19,7 +19,7 @@ class Users{
         const name = this.newUserName.value
         const email = this.newUserEmail.value
         const password = this.newUserPassword.value
-        this.adapter.createUser(name,email).then(user=> {
+        this.adapter.createUser(name,email,password).then(user=> {
             this.users.push(new User(user))
             this.newUserName.value = ''
             this.newUserEmail.value = ''
