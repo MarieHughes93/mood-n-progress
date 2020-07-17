@@ -10,22 +10,20 @@
 
   <!-- Calendar Main -->
   <main>
-    <div class="layout">
-      <div class="new-user-container">
+    <div class="user-container" id="user-container">
+      <div id="user-create">
         <ul>
-          <form id="new-user-form">Create User
-            <li><input type="text" name="create-user-name" id="new-user-name" placeholder="Name" /></li>
-            <li><input type="text" name="create-user-email" id="new-user-email"placeholder="email"/></li>
-            <li><input type="password" name="create-user-password" id="new-user-password"placeholder="Password"/></li>
+          <form id="user-create-form">Create User
+            <li><input type="text" name="create-user-name" id="user-create-name" placeholder="Name" /></li>
+            <li><input type="text" name="create-user-username" id="user-create-username"placeholder="Username"/></li>
             <input type="submit"/>
           </form>
         </ul>
       </div>
-      <div id="login-container">
+      <div id="user-login">
         <ul>
-          <form id="login-form">Login
-            <li><input type="text" name="user-email" id="login-user-email"placeholder="email"/></li>
-            <li><input type="password" name="user-password" id="login-user-password"placeholder="Password"/></li>
+          <form id="user-login-form">Login
+            <li><input type="text" name="user-username" id="user-login-username"placeholder="Username"/></li>
             <input type="submit"/>
           </form>
         </ul>
@@ -33,23 +31,12 @@
       <div id="user-edit">
         <ul>
           <form id="user-edit-form" >Edit
-            <li><input type="text" name="update-user-name" id="edit-user-name" placeholder="Name" /></li>
-            <li><input type="text" name="update-user-email" id="edit-user-email"placeholder="email"/></li>
-            <li><input type="password" name="update-user-password" id="edit-user-password"placeholder="Password"/></li>
+            <li><input type="text" name="edit-user-name" id="user-update-name" placeholder="Name" /></li>
+            <li><input type="text" name="edit-user-username" id="user-update-username"placeholder="Username"/></li>
             <input type="submit"/>
           </form>
         </ul>
       </div>
-      <div class="entry_type">Users</div>
-      <div id="users-container">
-        <ul id="users-container">
-
-        </ul>
-        <div id="user-show">
-
-        </div>
-      </div>
-    </div>
   </main>
 
   <!-- sidebar -->
