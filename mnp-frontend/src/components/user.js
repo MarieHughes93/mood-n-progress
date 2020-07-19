@@ -3,8 +3,6 @@ class User{
         this.id = userJSON.id
         this.name = userJSON.name
         this.username = userJSON.username
-    }
-    renderLi() {
-        return `<li>${this.username}</li>`
+        console.log("userjs   name: " + userJSON.name + ", username: " +userJSON.username)
     }
 }

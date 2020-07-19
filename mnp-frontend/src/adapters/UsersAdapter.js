@@ -9,10 +9,11 @@ class UsersAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
-    createUser(value) {
+    createUser(name,username) {
+        
         const user = {
-            name: value,
-            username: value,
+            name: name,
+            username: username,
         }
         return fetch(this.baseUrl,{
             method: 'POST',
