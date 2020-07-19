@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Note.destroy_all
 
 users = []
 
@@ -17,4 +18,14 @@ users = []
     end
 end
 
+10.times do
+    Note.create do |n|
+        n.title = Faker::TvShows::VentureBros.quote
+        n.content = Faker::GreekPhilosophers.quote
+        n.user = users.sample
+    end
+end
+
 test = User.create(name: "Cho", username: "test" )
+
+Note.create(title: "This better work", content: "This was made to be played with.", user: test)
