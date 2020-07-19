@@ -2,9 +2,11 @@
 class App{
     constructor() {
         this.current_user = ''
-        this.users = new Users()
         this.loginListner()
+        this.users = new Users()
+        this.notes = new Notes()
         this.adapter = new UsersAdapter
+        this.notesAdapter = new NotesAdapter
     }
 
     loginListner(){
@@ -23,6 +25,9 @@ class App{
             this.usersContainer = document.getElementById('users-container').style.display = "none";
             this.notesContainer = document.getElementById('notes-container').style.display = "block";
             this.noteCreateContainer = document.getElementById('notes-create').style.display = "block";
+            this.notesShowContainer = document.getElementById('notes-show').style.display = "block";
+            this.noteId = document.getElementById('add-user-id')
+            this.noteId.value = `${this.current_user.id}`
         })
     }
     
