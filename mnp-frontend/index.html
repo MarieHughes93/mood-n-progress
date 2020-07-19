@@ -16,7 +16,7 @@
 
         <div id="users-login" style="display: block;">
           <ul>
-            <form id="user-login-form">Login
+            <form id="user-login-form">User Login
               <li><input type="text" name="user-username" id="user-login-username"placeholder="Username"/></li>
               <input type="submit"/>
             </form>
@@ -51,9 +51,15 @@
             <ul>
               <form id="note-create-form">Create Note
                 <li><input type="text" name="create-note-title" id="note-create-title" placeholder="Title" /></li>
-                <li><input type="text" name="create-note-content" id="note-create-title" placeholder="Content"/></li>
+                <li><input type="text" name="create-note-content" id="note-create-content" placeholder="Content"/></li>
+                <li><input type="hidden" name="user_id" id="add-user-id" value=""/></li>
                 <input type="submit"/>
               </form>
+            </ul>
+          </div>
+
+          <div id="notes-show" style="display: none;">
+            <ul>
             </ul>
           </div>
 
@@ -61,7 +67,7 @@
             <ul>
               <form id="note-edit-form">Edit Note
                 <li><input type="text" name="edit-note-title" id="note-update-title" placeholder="Title" /></li>
-                <li><input type="text" name="edit-note-content" id="note-update-title" placeholder="Content"/></li>
+                <li><input type="text" name="edit-note-content" id="note-update-content" placeholder="Content"/></li>
                 <input type="submit"/>
               </form>
             </ul>
@@ -71,7 +77,7 @@
             <ul>
               <form id="note-destroy-form">Destory Note
                 <li><input type="text" name="delete-note-title" id="note-destroy-title" placeholder="Title" /></li>
-                <li><input type="text" name="delete-note-content" id="note-destory-title" placeholder="Content"/></li>
+                <li><input type="text" name="delete-note-content" id="note-destroy-content" placeholder="Content"/></li>
                 <input type="submit"/>
               </form>
             </ul>
@@ -103,9 +109,12 @@
     </nav>
   </sidebar>
   <script type="text/javascript" src="src\components\user.js"></script>
+  <script type="text/javascript" src="src\components\note.js"></script>
   <script src="src/components/users.js"></script>
+  <script src="src/components/notes.js"></script>
   <script src="src/components/app.js"></script>
   <script src="src/adapters/UsersAdapter.js"></script>
+  <script src="src/adapters/NotesAdapter.js"></script>
   <script src="src/index.js"></script>
 </html>
 </div>
