@@ -1,7 +1,7 @@
 class Notes{
     constructor(){
         this.notes = []
-        this.adapter = new NotesAdapter()
+        this.adapter = new ClassAdaptor()
         this.initBindingAndEventListners()
         this.fetchAndLoadNotes()
     }

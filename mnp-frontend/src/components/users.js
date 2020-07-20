@@ -1,7 +1,7 @@
 class Users{
     constructor(){
         this.users = []
-        this.adapter = new UsersAdapter()
+        this.adapter = new ClassAdaptor()
         this.initBindingAndEventListners()
     }
     

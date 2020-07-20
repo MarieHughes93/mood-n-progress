@@ -5,10 +5,10 @@ class App{
         this.loginListner()
         this.users = new Users()
         this.notes = new Notes()
-        this.adapter = new UsersAdapter
-        this.notesAdapter = new NotesAdapter
+        this.adapter = new ClassAdaptor
     }
 
+    // listen for login
     loginListner(){
         this.loginContainer = document.getElementById('user-login-form')
         this.loginUserName = document.getElementById('user-login-username')
@@ -34,3 +34,10 @@ class App{
 
  
 }
+
+
+
+// active highlight
+// document.getElementById("menu_").className = "menu__item menu__item--active"
+// deactivate highlight
+// document.getElementById("menu_").className = "menu__item"
