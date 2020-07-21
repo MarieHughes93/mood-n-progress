@@ -7,104 +7,26 @@
     </head>
 
 <div class="wrapper">
-  <!-- Center Main -->
   <main>
-
-    <div class="center-layout" id="center-layout">
-
-      <div class="users-container" id="users-container" style="display: block;">
-
-        <div id="users-login" style="display: block;">
-          <ul>
-            <form id="user-login-form">User Login
-              <li><input type="text" name="user-username" id="user-login-username"placeholder="Username"/></li>
-              <input type="submit"/>
-            </form>
-          </ul>
-        </div>
-
-
-        <div id="users-create" style="display: block;">
-          <ul>
-            <form id="user-create-form">Create User
-              <li><input type="text" name="create-user-name" id="user-create-name" placeholder="Name" /></li>
-              <li><input type="text" name="create-user-username" id="user-create-username"placeholder="Username"/></li>
-              <input type="submit"/>
-            </form>
-          </ul>
-        </div>
-
-        <div id="users-edit" style="display: none;">
-          <ul>
-            <form id="user-edit-form" >Edit
-              <li><input type="text" name="edit-user-name" id="user-update-name" placeholder="Name" /></li>
-              <li><input type="text" name="edit-user-username" id="user-update-username"placeholder="Username"/></li>
-              <input type="submit"/>
-            </form>
-          </ul>
-        </div>
-
-      </div>
-      <div class="notes-container" id="notes-container" style="display: none;">
-
-          <div id="notes-create" style="display: block;">
-            <ul>
-              <form id="note-create-form">Create Note
-                <li><input type="text" name="create-note-title" id="note-create-title" placeholder="Title" /></li>
-                <li><input type="text" name="create-note-content" id="note-create-content" placeholder="Content"/></li>
-                <li><input type="hidden" name="user_id" id="add-user-id" value=""/></li>
-                <input type="submit"/>
-              </form>
-            </ul>
-          </div>
-
-          <div id="notes-show" style="display: none;">
-            <ul>
-            </ul>
-          </div>
-
-          <div id="notes-edit" style="display: none;">
-            <ul>
-              <form id="note-edit-form">Edit Note
-                <li><input type="text" name="edit-note-title" id="note-update-title" placeholder="Title" /></li>
-                <li><input type="text" name="edit-note-content" id="note-update-content" placeholder="Content"/></li>
-                <input type="submit"/>
-              </form>
-            </ul>
-          </div>
-
-          <div id="notes-destroy" style="display: none;">
-            <ul>
-              <form id="note-destroy-form">Destory Note
-                <li><input type="text" name="delete-note-title" id="note-destroy-title" placeholder="Title" /></li>
-                <li><input type="text" name="delete-note-content" id="note-destroy-content" placeholder="Content"/></li>
-                <input type="submit"/>
-              </form>
-            </ul>
-          </div>
-
-      </div>
+      <div class="content-root" id="content-root">
+        <p>test</p>
     </div>
     </main>
 
-  <!-- sidebar -->
     <sidebar>
-    <div class="logo">Mood N Progress</div>
-    <div class="avatar">
-      <div class="avatar__name">Name</div>
+    <div class="logo" id="logo">Mood N Progress</div>
+    <div class="current_user">
+      <div class="current_user_name" id="current_user_name">Name</div>
     </div>
-    <nav class="menu">
-      <a class="menu__item menu__item--active" href="#">
-        <i class="menu__icon fa fa-home"></i>
-        <span class="menu__text">Overview</span>
+    <nav class="menu-root">
+      <a class="menu_item -active" href="#">
+        <span class="menu_text" id="menu-one">Overview</span>
       </a>
-      <a class="menu__item" href="#">
-        <i class="menu__icon fa fa-profile"></i>
-        <span class="menu__text">Profile</span>
+      <a class="menu_item" href="#">
+        <span class="menu_text" id="menu-two">Profile</span>
       </a>
-      <a class="menu__item " href="#">
-        <i class="menu__icon fa fa-notes"></i>
-        <span class="menu__text">Notes</span>
+      <a class="menu_item " href="#">
+        <span class="menu_text" id="menu-three">Notes</span>
       </a>
     </nav>
   </sidebar>
