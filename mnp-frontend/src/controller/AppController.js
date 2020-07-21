@@ -3,9 +3,9 @@ class AppController{
     constructor() {
         this.current_user = ''
         this.loginListner()
-        this.users = new Users()
-        this.notes = new Notes()
-        this.adapter = new ClassAdaptor
+        this.UsersController = new UsersController()
+        this.NotesController = new NotesController()
+        this.adapter = new ModelAdaptor
     }
 
     // listen for login

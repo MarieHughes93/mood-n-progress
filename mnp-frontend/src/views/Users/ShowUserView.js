@@ -1,0 +1,3 @@
+class ShowUserView {
+    constructor(){}
+}

@@ -1,4 +1,4 @@
-class ClassAdaptor{
+class ModelAdaptor{
     constructor(){
         this.userBaseUrl = 'http://localhost:3000/api/v1/users'
         this.noteBaseUrl = 'http://localhost:3000/api/v1/notes'

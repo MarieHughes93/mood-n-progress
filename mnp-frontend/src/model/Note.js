@@ -6,8 +6,5 @@ class Note {
         this.user_id = noteJSON.user_id
     }
     
-    renderLi() {
-        return `<li>${this.title}</li>`
-    }
 
 }

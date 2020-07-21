@@ -1,4 +1,4 @@
-class Users{
+class UsersController{
     constructor(){
         this.users = []
         this.adapter = new ClassAdaptor()

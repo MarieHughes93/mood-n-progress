@@ -1,0 +1,3 @@
+class NewUserView {
+    constructor(){}
+}

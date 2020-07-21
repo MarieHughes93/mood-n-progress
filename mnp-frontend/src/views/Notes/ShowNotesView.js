@@ -1,0 +1,3 @@
+class ShowNotesView {
+    constructor(){}
+}

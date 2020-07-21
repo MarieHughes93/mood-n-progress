@@ -1,4 +1,4 @@
-class Notes{
+class NotesController{
     constructor(){
         this.notes = []
         this.adapter = new ClassAdaptor()

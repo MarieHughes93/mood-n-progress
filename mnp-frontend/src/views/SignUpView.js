@@ -1,0 +1,3 @@
+class SignUpView {
+    constructor(){}
+}
