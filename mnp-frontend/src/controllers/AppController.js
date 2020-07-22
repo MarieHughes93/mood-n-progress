@@ -38,6 +38,7 @@ class AppController{
         })
     }
     _fetchNoteFunction(){
+        this.notes = []
         this.adaptor
         .readNoteAdaptor()
         .then(notes => {

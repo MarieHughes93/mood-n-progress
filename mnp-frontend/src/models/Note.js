@@ -6,7 +6,7 @@ class Note {
         this.user_id = noteJSON.user_id
     }
     renderIndex(){
-        return `<li>${this.title}<br><button id="note_show" value="${this.id}">View</button></li><br>`
+        return `<li>${this.title}<br><button id="note_show" class="noteShow --${this.id}" value="${this.id}">View</button></li><br>`
         
     }
 
