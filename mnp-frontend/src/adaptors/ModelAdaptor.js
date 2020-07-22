@@ -6,11 +6,11 @@ class ModelAdaptor{
         }
 
         // fetch data
-        getUsers(){
+        readUsersAdaptor(){
             return fetch(this.userBaseUrl).then(res => res.json()
             )
         }
-        getNotes(){
+        readNoteAdaptor(){
             return fetch(this.noteBaseUrl).then(res=>res.json()
             )
         }

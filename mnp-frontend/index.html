@@ -13,14 +13,16 @@
         <h1>Welcome!</h1>
         <p>"It is a pleasure to be meeting you! Mood in progress is a javascript frontend and ruby rails api backend SPA. Please login or sign up! You can create entries to hold information. The designed purpose is to be a mood journal but feel free to use it in the way that is most applicable to you!"</p>
       </div>
-        <div class="users-container logged-out-visible" id="users-container" style="display: block;">
+        <div class="users-container" id="users-container" style="display: block;">
           <div class="l-user logged-out-visible" id="l-user">
+            <h1>SignIn</h1>
             <form id="login-user-form">
               <input type="text" name="login-user-username" id="login-user-username" placeholder="Username">
               <input type="submit" value="Login">
             </form>
           </div>
           <div class="c-user logged-out-visible" id="c-user">
+            <h1>SignUp</h1>
             <form id="create-user-form">
               <input type="text" name="create-user-name" id="create-user-name" placeholder="Name">
               <input type="text" name="create-user-username" id="create-user-username" placeholder="Username">
@@ -30,6 +32,7 @@
           <div class="r-user logged-in-visible" id="r-user">
           </div>
           <div class="u-user logged-in-visible" id="u-user">
+            <h1>Update</h1>
             <form id="update-user-form">
               <input type="text" name="update-user-name" id="update-user-name" placeholder="Update Name">
               <input type="text" name="update-user-username" id="update-user-username" placeholder="Update Username">
@@ -38,25 +41,37 @@
           </div>
         </div>
         <div class="notes-container logged-in-visible" id="notes-container">
+          <div class="i-note" id="i-note">
+            <h1>OverView</h1>
+          </div>
           <div class="c-note" id="c-note">
+            <h1>Create A Entry</h1>
+            <ul>
             <form id="c-note-form">
-              <input type="text" name="create-note-title" id="create-note-title" placeholder="Title">
-              <textarea name="message" rows="10" cols="80" id="create-note-content" placeholder="Content"></textarea>
-              <input type="hidden" name="current_user_id" id="current_user_id" value="">
-              <input type="submit" value="Create!">
+              <li></li><input type="text" name="create-note-title" id="create-note-title" placeholder="Title"></li>
+              <li></li><textarea name="message" rows="10" cols="80" id="create-note-content" placeholder="Content"></textarea></li>
+              <input type="hidden" class="user_id" name="current_user_id" id="current_user_id" value="">
+              <li><input type="submit" value="Create!"></li>
             </form>
+          </ul>
           </div>
           <div class="r-note" id="r-note">
           </div>
           <div class="u-note" id="u-note">
+            <h1>Update Note</h1>
             <form id="update-note-form">
               <input type="text" name="update-note-title" id="update-note-title" placeholder="Title">
               <textarea name="update-note-content" id="update-note-content" rows="10" cols="80" placeholder="Update Content"></textarea>
-              <input type="hidden" name="current_user_id" id="current_user_id" value="">
+              <input class="user_id" type="hidden" name="current_user_id" id="current_user_id" value="">
               <input type="submit" value="Update">
             </form>
           </div>
           <div class="d-note" id="d-note">
+            <h1>Delete Note</h1>
+            <p>Are you sure?</p>
+            <input class="user_id" type="hidden" name="current_user_id" id="current_user_id" value="">
+            <input class="note_id" type="hidden" name="note_id" id="note_id" value="">
+              <input type="submit" value="Delete">
           </div>
         </div>
       </div>
@@ -66,7 +81,7 @@
 
     <div class="logo" id="logo">Mood N Progress</div>
     <div class="current_user logged-in-visible" id="current_user">
-      <div class="current_user_name" id="current_user_name" value="">NAME</div>
+      <div class="current_user_name" id="current_user_name" value="" ></div>
     </div>
     <nav class="menu">
       <a class="menu_item logged-out-visible" id="menu-welcome" href="#">
