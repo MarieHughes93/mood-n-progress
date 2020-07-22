@@ -20,7 +20,6 @@ class ModelAdaptor{
             const user = {
                 username: value,
             }
-            console.log("test "+value)
             return fetch(this.loginUrl + user.username).then(res=> res.json())
         }
 

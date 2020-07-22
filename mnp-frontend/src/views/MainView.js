@@ -1,26 +1,32 @@
 class MainView{
-    constructor(createNoteFunction){
-        this.notes=[]
+    constructor(fetchNoteFunction,createNoteFunction,updateNoteFunction,deleteNoteFunction,updateUserFunction){
+        this.notes = []
+        this.fetchNoteFunction = fetchNoteFunction
+        this.createNoteFunction = createNoteFunction
+        this.updateNoteFunction = updateNoteFunction
+        this.destroyNoteListner = deleteNoteFunction
+        this.updateUserFunction = updateUserFunction
         this.noteIndexView()
         this.menuOverViewListner()
         this.menuProfileListner()
         this.menuCreateNoteListner()
-        this.createNoteFunction = createNoteFunction
+        this.createNoteListner()
     }
 
     // crud
     createNoteListner(){
-        const x = document.getElementById("")
-        x.addEventListener("submit", this.oncreateNoteFunction())
+        const x = document.getElementById("c-note-form")
+        x.addEventListener("submit", this.onCreateNoteSubmit.bind(this))
     }
     onCreateNoteSubmit(e){
         e.preventDefault();
-
         this.newTitle = document.getElementById("create-note-title") 
         this.newContent = document.getElementById("create-note-content")
+        this.newUserId = document.getElementById("current_userId")
         const title = this.newTitle.value
         const content = this.newContent.value
-        this.createNoteFunction(title,content);
+        const userId = this.newUserId.value
+        this.createNoteFunction(title,content,userId);
     }
 
     updateNoteListner(){
