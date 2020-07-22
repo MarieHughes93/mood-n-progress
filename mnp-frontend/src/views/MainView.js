@@ -1,11 +1,8 @@
 class MainView{
-    constructor(fetchNoteFunction,createNoteFunction,updateNoteFunction,deleteNoteFunction,updateUserFunction){
+    constructor(createNoteFunction,fetchNoteFunction){
         this.notes = []
-        this.fetchNoteFunction = fetchNoteFunction
         this.createNoteFunction = createNoteFunction
-        this.updateNoteFunction = updateNoteFunction
-        this.destroyNoteListner = deleteNoteFunction
-        this.updateUserFunction = updateUserFunction
+        this.fetchNoteFunction = fetchNoteFunction
         this.noteIndexView()
         this.menuOverViewListner()
         this.menuProfileListner()
@@ -63,6 +60,7 @@ class MainView{
 
 // views
     noteIndexView(){
+        this.fetchNoteFunction()
         this.loggedOutDiv()
         this.loggedInDiv()
         this.hideDiv("users-container")
@@ -70,12 +68,12 @@ class MainView{
         this.hideDiv("r-note")
         this.hideDiv("u-note")
         this.hideDiv("d-note")
-        this.showDiv("i-note")
+        this.showDiv("overview")
     }
     noteCreateView(){
         this.loggedOutDiv()
         this.hideDiv("users-container")
-        this.hideDiv("i-note")
+        this.hideDiv("overview")
         this.hideDiv("r-note")
         this.hideDiv("u-note")
         this.hideDiv("d-note")
@@ -84,7 +82,7 @@ class MainView{
     noteShowView(note){
         this.loggedOutDiv()
         this.hideDiv("users-container")
-        this.hideDiv("i-note")
+        this.hideDiv("overview")
         this.hideDiv("c-note")
         this.hideDiv("u-note")
         this.hideDiv("d-note")
@@ -93,7 +91,7 @@ class MainView{
     noteEditView(){
         this.loggedOutDiv()
         this.hideDiv("users-container")
-        this.hideDiv("i-note")
+        this.hideDiv("overview")
         this.hideDiv("c-note")
         this.hideDiv("r-note")
         this.hideDiv("d-note")

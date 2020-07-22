@@ -11,7 +11,7 @@ class ModelAdaptor{
             )
         }
         readNoteAdaptor(){
-            return fetch(this.noteBaseUrl).then(res=>res.json()
+            return fetch(this.noteBaseUrl).then(res => res.json()
             )
         }
 

@@ -11,26 +11,23 @@ class AppController{
         }
     }
     // sessions
+    _signin(user){
+        this.current_user = new User(user)
+        this.setUserId()
+        this.setUserName()
+        this.view = new MainView(
+        this._createNoteFunction.bind(this),
+        this._fetchNoteFunction.bind(this)
+            )}
+
     _onCreateUser(name,username){
         this.adaptor.createUserAdaptor(name,username).then(user=> {
-            this.current_user = new User(user)
-            this.setUserId()
-            this.setUserName()
-            this.view = new MainView(
-                this._fetchNoteFunction.bind(this),
-                this._createNoteFunction.bind(this),
-                this._updatNoteFunction.bind(this),
-                this._deleteNoteFunction.bind(this),
-                this._updateUserFunction.bind(this),
-                )
+            this._signin(user)
         })
     }
      _loginUser(userName){
         this.adaptor.loginAdaptor(userName).then(user=> {
-            this.current_user = new User(user)
-            this.setUserId()
-            this.setUserName()
-            this.view =  new MainView(this._createNoteFunction.bind(this))
+            this._signin(user)
         })
     }
      // note
@@ -40,9 +37,26 @@ class AppController{
             this.view.noteIndexView()
         })
     }
+    _fetchNoteFunction(){
+        this.adaptor
+        .readNoteAdaptor()
+        .then(notes => {
+            notes.forEach(note => this.notes.push(new Note(note))) 
+        })
+        .then(()=>{
+            this.render()
+        }) 
+    }
+
+    // innhtml is at risk for someone entering html format to alter the page. need to find a way to create for the amount of notes the <li with each notes id but then add the text with innertext... comeback to it chocho.. baby steps
+    render(){
+        this.noteIndexContainer = document.getElementById("index-note-list")
+        this.noteIndexContainer.innerHTML= this.notes.map(note => note.renderIndex()).join('')
+        // this.noteIndexContainer.innerHTML = this.notes.map(note => note.render())
+    }
             
      _updatNoteFunction(title,content,userId){
-        this.adaptor.updateNoteAdaptor(title,content,userId).then(notes=> {
+        this.adaptor.updateNoteAdaptor(title,content,userId).then(note=> {
             this.view.noteShowView(note)
         })
     }
