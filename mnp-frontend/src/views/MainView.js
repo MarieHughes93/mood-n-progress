@@ -1,22 +1,32 @@
 class MainView{
     constructor(){
+        this.notes=[]
+        this.noteIndexView()
     }
 
 
+    // fetch data
+    fetchAndLoadNotes(){}
+    FetchAndLoadUser(){}
     // crud
     createNoteListner(){}
+    updateNoteListner(){}
+    destroyNoteListner(){}
+    updateUserListner(){}
 
 
-    renderRoot(){}
-    renderCreateNote(){}
-    renderShowNote(){}
-    renderShowUser(){}
-    renderEditNote(){}
-    renderEditUser(){}
+// views
+    noteIndexView(){}
+    noteCreateView(){}
+    noteShowView(note){}
+    userShowView(){}
+    noteEditView(){}
+    userEditView(){}
 
     menuOverViewListner(){}
     menuProfileListner(){}
     menuCreateListner(){}
+    
 
 
 // hide show elements

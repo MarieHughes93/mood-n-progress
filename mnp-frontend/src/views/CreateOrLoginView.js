@@ -1,7 +1,7 @@
 class CreateOrLoginView{
     constructor(createUserFunction, loginUserFunction){
         // createUserfunction - creates the user on the api side 
-        this.renderWelcome()
+        this.welcomeView()
         // create the form and set up hooks
         this.createUserListner()
         this.loginUserListner()
@@ -58,25 +58,23 @@ class CreateOrLoginView{
 
       loggedOutDiv(){
           const x = document.getElementsByClassName("logged-in-visible")
-          for(let element of x){ 
-            console.log("element: " + element + ", element.id: " + element.id)
-              this.hideDiv(element.id)}
+          for(let element of x){this.hideDiv(element.id)}
       }
 
 // logged out views
-    renderWelcome(){
+    welcomeView(){
         this.loggedOutDiv()
         this.showDiv("welcome")
         this.hideDiv("users-container")
     }
-    renderSignUp(){
+    signUpView(){
         this.loggedOutDiv()
         this.hideDiv("welcome")
         this.showDiv("users-container")
         this.hideDiv("l-user")
         this.showDiv("c-user")
     }
-    renderSignIn(){
+    signInView(){
         this.loggedOutDiv()
         this.hideDiv("welcome")
         this.showDiv("users-container")
@@ -86,14 +84,14 @@ class CreateOrLoginView{
 // menulistner
     menuRootListner(){
         const x = document.getElementById("menu-welcome")
-        x.addEventListener("click", this.renderWelcome.bind(this))
+        x.addEventListener("click", this.welcomeView.bind(this))
     }
     menuSignUpListner(){
         const x = document.getElementById("menu-signup")
-        x.addEventListener("click", this.renderSignUp.bind(this))
+        x.addEventListener("click", this.signUpView.bind(this))
     }
     menuSignInListner(){
         const x = document.getElementById("menu-signin")
-        x.addEventListener("click", this.renderSignIn.bind(this))
+        x.addEventListener("click", this.signInView.bind(this))
     } 
 }

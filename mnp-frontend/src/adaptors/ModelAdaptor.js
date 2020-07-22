@@ -16,18 +16,20 @@ class ModelAdaptor{
         }
 
         // seesion data
-        login(value) {
+        loginAdaptor(value) {
             const user = {
                 username: value,
             }
+            console.log("test "+value)
             return fetch(this.loginUrl + user.username).then(res=> res.json())
         }
+
         logout(value){
 
         }
 
         // Create
-        createUser(name,username) {
+        createUserAdaptor(name,username) {
         
             const user = {
                 name: name,
@@ -42,7 +44,7 @@ class ModelAdaptor{
             }).then(res=> res.json())
         }
 
-        createNote(title,content,userId) {
+        createNoteAdaptor(title,content,userId) {
             const note = {
                 title: title,
                 content: content,
@@ -60,6 +62,9 @@ class ModelAdaptor{
         }
 
         // Update
+        updateNoteAdaptor(){}
+        updateUserAdaptor(){}
 
         // Destroy
+        destroyNoteAdaptor(){}
 }
