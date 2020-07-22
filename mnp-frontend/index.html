@@ -9,34 +9,92 @@
 <div class="wrapper">
   <main>
       <div class="content-root" id="content-root">
-        <p>test</p>
-    </div>
+      <div class="welcome logged-out-visible" id="welcome">
+        <h1>Welcome!</h1>
+        <p>"It is a pleasure to be meeting you! Mood in progress is a javascript frontend and ruby rails api backend SPA. Please login or sign up! You can create entries to hold information. The designed purpose is to be a mood journal but feel free to use it in the way that is most applicable to you!"</p>
+      </div>
+        <div class="users-container logged-out-visible" id="users-container" style="display: block;">
+          <div class="l-user logged-out-visible" id="l-user">
+            <form id="login-user-form">
+              <input type="text" name="login-user-username" id="login-user-username" placeholder="Username">
+              <input type="submit" value="Login">
+            </form>
+          </div>
+          <div class="c-user logged-out-visible" id="c-user">
+            <form id="create-user-form">
+              <input type="text" name="create-user-name" id="create-user-name" placeholder="Name">
+              <input type="text" name="create-user-username" id="create-user-username" placeholder="Username">
+              <input type="submit" value="SignUp">
+            </form>
+          </div>
+          <div class="r-user logged-in-visible" id="r-user">
+          </div>
+          <div class="u-user logged-in-visible" id="u-user">
+            <form id="update-user-form">
+              <input type="text" name="update-user-name" id="update-user-name" placeholder="Update Name">
+              <input type="text" name="update-user-username" id="update-user-username" placeholder="Update Username">
+              <input type="submit" value="Update">
+            </form>
+          </div>
+        </div>
+        <div class="notes-container logged-in-visible" id="notes-container">
+          <div class="c-note" id="c-note">
+            <form id="c-note-form">
+              <input type="text" name="create-note-title" id="create-note-title" placeholder="Title">
+              <textarea name="message" rows="10" cols="80" id="create-note-content" placeholder="Content"></textarea>
+              <input type="hidden" name="current_user_id" id="current_user_id" value="">
+              <input type="submit" value="Create!">
+            </form>
+          </div>
+          <div class="r-note" id="r-note">
+          </div>
+          <div class="u-note" id="u-note">
+            <form id="update-note-form">
+              <input type="text" name="update-note-title" id="update-note-title" placeholder="Title">
+              <textarea name="update-note-content" id="update-note-content" rows="10" cols="80" placeholder="Update Content"></textarea>
+              <input type="hidden" name="current_user_id" id="current_user_id" value="">
+              <input type="submit" value="Update">
+            </form>
+          </div>
+          <div class="d-note" id="d-note">
+          </div>
+        </div>
+      </div>
     </main>
 
     <sidebar>
+
     <div class="logo" id="logo">Mood N Progress</div>
-    <div class="current_user">
-      <div class="current_user_name" id="current_user_name">Name</div>
+    <div class="current_user logged-in-visible" id="current_user">
+      <div class="current_user_name" id="current_user_name" value="">NAME</div>
     </div>
-    <nav class="menu-root">
-      <a class="menu_item -active" href="#">
-        <span class="menu_text" id="menu-one">Overview</span>
+    <nav class="menu">
+      <a class="menu_item logged-out-visible" id="menu-welcome" href="#">
+        <span class="menu_text" id="" id="menu-one">Welcome</span>
       </a>
-      <a class="menu_item" href="#">
-        <span class="menu_text" id="menu-two">Profile</span>
+      <a class="menu_item logged-out-visible" id="menu-signup" href="#">
+        <span class="menu_text" id="menu-two" >SignUp</span>
       </a>
-      <a class="menu_item " href="#">
-        <span class="menu_text" id="menu-three">Notes</span>
+      <a class="menu_item logged-out-visible"id="menu-signin" href="#">
+      <span class="menu_text" id="menu-three" >SignIn</span>
+    </a>
+      <a class="menu_item logged-in-visible" id="menu-overview" href="#">
+        <span class="menu_text"  id="menu-four">Overview</span>
+      </a>
+      <a class="menu_item logged-in-visible" id="menu-profile" href="#">
+        <span class="menu_text" id="menu-five">Profile</span>
+      </a>
+      <a class="menu_item logged-in-visible" id="menu-create-note" href="#">
+        <span class="menu_text" id="menu-six">Create Notes</span>
       </a>
     </nav>
   </sidebar>
-  <script type="text/javascript" src="src\components\user.js"></script>
-  <script type="text/javascript" src="src\components\note.js"></script>
-  <script src="src/components/users.js"></script>
-  <script src="src/components/notes.js"></script>
-  <script src="src/components/app.js"></script>
-  <script src="src/adapters/UsersAdapter.js"></script>
-  <script src="src/adapters/NotesAdapter.js"></script>
+  <script type="text/javascript" src="src/models/User.js"></script>
+  <script src="src/models/Note.js"></script>
+  <script src="src/adaptors/ModelAdaptor.js"></script>
+  <script src="src/views/MainView.js"></script>
+  <script src="src/views/CreateOrLoginView.js"></script>
+  <script src="src/controllers/AppController.js"></script>
   <script src="src/index.js"></script>
 </html>
 </div>

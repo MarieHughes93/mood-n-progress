@@ -1,3 +1,0 @@
-class EditUserView {
-    constructor(){}
-}
