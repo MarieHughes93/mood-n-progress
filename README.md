@@ -4,7 +4,10 @@ Do you ever feel like you wish you had more knowledge on how things affect you? 
 
 ## Prerequisites & Installing
 
-To be added later
+*Go to https://github.com/kchohee/mood-n-progress to clone the repository. 
+*After clonning bundle install
+*Then feel free to use the seed data by running rails db:seed
+*Or feel free to sign up and start using
 
 ## Contributing
 
