@@ -4,7 +4,6 @@ class MainView{
         this.currentNote = currentNote
         this.createNoteFunction = createNoteFunction
         this.fetchNoteFunction = fetchNoteFunction
-        this.noteIndexView()
         this.menuOverViewListner()
         this.menuCreateNoteListner()
         this.createNoteListner()
@@ -23,11 +22,15 @@ class MainView{
         this.newUserId = document.getElementById("current_userId")
         const title = this.newTitle.value
         const content = this.newContent.value
-        const userId = this.newUserId.value
-        this.createNoteFunction(title,content,userId);
+        this.createNoteFunction(title,content);
     }
 
-
+resetForm(){
+    this.newTitle = document.getElementById("create-note-title") 
+    this.newContent = document.getElementById("create-note-content")
+    this.newTitle.value =''
+    this.newContent.value =''
+}
 
 // views
     noteIndexView(){
@@ -42,6 +45,7 @@ class MainView{
         this.showDiv("overview")
     }
     noteCreateView(){
+        this.resetForm()
         this.loggedOutDiv()
         this.hideDiv("users-container")
         this.hideDiv("overview")

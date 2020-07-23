@@ -4,6 +4,7 @@ class AppController{
         this.collectUsers()
         this.current_user = ""
         this.current_note = ''
+        this.currentID = ''
         this.notes = []
         this.users = []
         this.view = ''
@@ -16,6 +17,8 @@ class AppController{
     // sessions
     _signin(user){
         this.current_user = new User(user)
+        this.currentID = this.current_user.id
+        console.log(`${this.currentID}`)
         this.setUserId()
         this.setUserName()
         this.view = new MainView(
@@ -38,15 +41,17 @@ class AppController{
         })
     }
      // note
-     _createNoteFunction(title,content,userId){
-        this.adaptor.createNoteAdaptor(title,content,userId).then(note=> {
+     _createNoteFunction(title,content){
+        const userID = this.currentID
+        this.adaptor.createNoteAdaptor(title,content,userID).then(note=> {
             this.notes << note
             this.view.noteIndexView()
         })
     }
-    _fetchNoteFunction(view){
+    _fetchNoteFunction(){
+        const userID = this.currentID
         this.notes = []
-        this.adaptor.readNotesAdaptor()
+        this.adaptor.readNotesAdaptor(userID)
         .then(notes => {
             notes.forEach(note => this.notes.push(new Note(note))) 
         })
@@ -64,7 +69,8 @@ class AppController{
     }
     deleteNote(event){
         const noteId = event.target.value
-        this.adaptor.deleteNoteAdaptor(noteId).then(()=>{
+        const userId = this.currentID
+        this.adaptor.deleteNoteAdaptor(userId,noteId).then(()=>{
             this.view.noteIndexView()
         })
     }

@@ -1,37 +1,41 @@
 class ModelAdaptor{
     constructor(){
-        this.userBaseUrl = 'http://localhost:3000/api/v1/users'
-        this.noteBaseUrl = 'http://localhost:3000/api/v1/notes'
+        this.baseUrl = 'http://localhost:3000/api/v1/users/'
+        this.noteEnd = "/notes/"
         this.loginUrl = 'http://localhost:3000/api/v1/login/'
         }
 
-        // fetch data
+        // fetch data 
         readUsersAdaptor(){
-            return fetch(this.userBaseUrl).then(res => res.json()
+            return fetch(this.baseUrl).then(res => res.json()
             )
         }
-        readNotesAdaptor(){
-            return fetch(this.noteBaseUrl).then(res => res.json()
+        // index /api/v1/users/:user_id/notes(.:format)
+        readNotesAdaptor(userID){
+            const user = {
+                id: userID
+            }
+            return fetch(this.baseUrl + user.id + this.noteEnd).then(res => res.json()
             )
         }
 
-        // seesion data
-        loginAdaptor(value) {
+        // seesion /api/v1/login/:username(.:format)  
+        loginAdaptor(username) {
             const user = {
-                username: value,
+                username: username,
             }
             return fetch(this.loginUrl + user.username).then(res=> res.json())
         }
 
 
-        // Create
+        // Create /api/v1/users(.:format)
         createUserAdaptor(name,username) {
         
             const user = {
                 name: name,
                 username: username,
             }
-            return fetch(this.userBaseUrl,{
+            return fetch(this.baseUrl,{
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -40,13 +44,14 @@ class ModelAdaptor{
             }).then(res=> res.json())
         }
 
+        // create note /api/v1/users/:user_id/notes(.:format)      
         createNoteAdaptor(title,content,userId) {
             const note = {
                 title: title,
                 content: content,
                 user_id: userId,
             }
-            return fetch(this.noteBaseUrl,{
+            return fetch(this.baseUrl + note.user_id + this.noteEnd,{
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -57,12 +62,13 @@ class ModelAdaptor{
                 res=> res.json())
         }
 
-        // Destroy
-        deleteNoteAdaptor(noteId){
+        // Destroy /api/v1/users/:user_id/notes/:id(.:format)    
+        deleteNoteAdaptor(userId,noteId){
             const note ={
-                id: noteId
+                id: noteId,
+                user_Id: userId
             }
-            return fetch(this.noteBaseUrl+ "/"+ note.id,{
+            return fetch(this.baseUrl+ note.user_id + this.noteEnd + note.id,{
                 method: 'Delete',
                 headers: {
                     'content-type': 'application/json',
