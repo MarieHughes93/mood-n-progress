@@ -10,7 +10,7 @@ class ModelAdaptor{
             return fetch(this.userBaseUrl).then(res => res.json()
             )
         }
-        readNoteAdaptor(){
+        readNotesAdaptor(){
             return fetch(this.noteBaseUrl).then(res => res.json()
             )
         }
@@ -23,9 +23,6 @@ class ModelAdaptor{
             return fetch(this.loginUrl + user.username).then(res=> res.json())
         }
 
-        logout(value){
-
-        }
 
         // Create
         createUserAdaptor(name,username) {
@@ -60,10 +57,19 @@ class ModelAdaptor{
                 res=> res.json())
         }
 
-        // Update
-        updateNoteAdaptor(){}
-        updateUserAdaptor(){}
-
         // Destroy
-        destroyNoteAdaptor(){}
+        deleteNoteAdaptor(noteId){
+            const note ={
+                id: noteId
+            }
+            return fetch(this.noteBaseUrl+ "/"+ note.id,{
+                method: 'Delete',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify({note}),
+            
+            }).then(
+                res=> res.json())
+        }
 }

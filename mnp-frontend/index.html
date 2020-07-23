@@ -29,21 +29,10 @@
               <input type="submit" value="SignUp">
             </form>
           </div>
-          <div class="r-user logged-in-visible" id="r-user">
-          </div>
-          <div class="u-user logged-in-visible" id="u-user">
-            <h1>Update</h1>
-            <form id="update-user-form">
-              <input type="text" name="update-user-name" id="update-user-name" placeholder="Update Name">
-              <input type="text" name="update-user-username" id="update-user-username" placeholder="Update Username">
-              <input type="submit" value="Update">
-            </form>
-          </div>
         </div>
         <div class="notes-container logged-in-visible" id="notes-container">
           <div class="overview" id="overview">
             <div class="index-note" id="index-note">
-              
               <h1>Overview</h1>
             </div>
             <div class="index-note-list" id="index-note-list">
@@ -55,7 +44,7 @@
             <form id="c-note-form">
               <li></li><input type="text" name="create-note-title" id="create-note-title" placeholder="Title"></li>
               <li></li><textarea name="message" rows="10" cols="80" id="create-note-content" placeholder="Content"></textarea></li>
-              <input type="hidden" class="user_id" name="current_user_id" id="current_user_id" value="">
+              <input type="hidden" class="userId" name="current_user_id" id="current_user_id" value="">
               <li><input type="submit" value="Create!"></li>
             </form>
           </ul>
@@ -67,15 +56,15 @@
             <form id="update-note-form">
               <input type="text" name="update-note-title" id="update-note-title" placeholder="Title">
               <textarea name="update-note-content" id="update-note-content" rows="10" cols="80" placeholder="Update Content"></textarea>
-              <input class="user_id" type="hidden" name="current_user_id" id="current_userId" value="">
+              <input class="userId" type="hidden" name="current_user_id" id="current_userId" value="">
               <input type="submit" value="Update">
             </form>
           </div>
           <div class="d-note" id="d-note">
             <h1>Delete Note</h1>
             <p>Are you sure?</p>
-            <input class="user_id" type="hidden" name="current_user_id" id="current_user_id" value="">
-            <input class="note_id" type="hidden" name="note_id" id="note_id" value="">
+            <input class="userId" type="hidden" name="current_user_id" id="current_user_id" value="">
+            <input class="noteId" type="hidden" name="noteId" id="note_id" value="">
               <input type="submit" value="Delete">
           </div>
         </div>
@@ -100,9 +89,6 @@
     </a>
       <a class="menu_item logged-in-visible" id="menu-overview" href="#">
         <span class="menu_text"  id="menu-four">Overview</span>
-      </a>
-      <a class="menu_item logged-in-visible" id="menu-profile" href="#">
-        <span class="menu_text" id="menu-five">Profile</span>
       </a>
       <a class="menu_item logged-in-visible" id="menu-create-note" href="#">
         <span class="menu_text" id="menu-six">Create Notes</span>

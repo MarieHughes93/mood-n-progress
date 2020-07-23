@@ -4,6 +4,5 @@ class User{
         this.name = userJSON.name
         this.username = userJSON.username
     }
-    
 }
 

@@ -1,15 +1,16 @@
 class MainView{
-    constructor(createNoteFunction,fetchNoteFunction){
+    constructor(createNoteFunction,fetchNoteFunction,currentNote){
         this.notes = []
+        this.currentNote = currentNote
         this.createNoteFunction = createNoteFunction
         this.fetchNoteFunction = fetchNoteFunction
         this.noteIndexView()
         this.menuOverViewListner()
-        this.menuProfileListner()
         this.menuCreateNoteListner()
         this.createNoteListner()
     }
 
+    
     // crud
     createNoteListner(){
         const x = document.getElementById("c-note-form")
@@ -26,36 +27,6 @@ class MainView{
         this.createNoteFunction(title,content,userId);
     }
 
-    updateNoteListner(){
-        const x = document.getElementById("")
-        x.addEventListener("submit", this.updateNoteFunction.bind(this));
-    }
-    onUpdateNoteSubmit(e){
-        e.preventDefault();
-    }
-
-    
-    updateUserListner(){
-        const x = document.getElementById("")
-        x.addEventListener("submit", this.updateUserFunction.bind(this));
-    }
-    onUpdateUserSubmit(e){
-        e.preventDefault();
-    }
-
-    destroyNoteListner(){
-        const x = document.getElementById("")
-        x.addEventListener("submit", this.destroyNoteFunction.bind(this));
-    }
-    onDeleteUserSubmit(e){
-        e.preventDefault();
-    }
-
-    showNoteListner(){const x = document.getElementById("")
-    x.addEventListener("submit", this.showNoteFunction.bind(this));}
-    onShowNoteSubmit(e){
-        e.preventDefault();
-    }
 
 
 // views
@@ -79,47 +50,11 @@ class MainView{
         this.hideDiv("d-note")
         this.showDiv("c-note")
     }
-    noteShowView(note){
-        this.loggedOutDiv()
-        this.hideDiv("users-container")
-        this.hideDiv("overview")
-        this.hideDiv("c-note")
-        this.hideDiv("u-note")
-        this.hideDiv("d-note")
-        this.ShowDiv("r-note")
-    }
-    noteEditView(){
-        this.loggedOutDiv()
-        this.hideDiv("users-container")
-        this.hideDiv("overview")
-        this.hideDiv("c-note")
-        this.hideDiv("r-note")
-        this.hideDiv("d-note")
-        this.ShowDiv("u-note")
-    }
-    userShowView(){
-        this.loggedOutDiv()
-        this.hideDiv("notes-container")
-        this.showDiv("users-container")
-        this.showDiv("r-user")
-        this.hideDiv("u-user")
-    }
     
-    userEditView(){
-        this.loggedOutDiv()
-        this.hideDiv("notes-container")
-        this.showDiv("users-container")
-        this.hideDiv("r-user")
-        this.showDiv("u-user")
-    }
 
     menuOverViewListner(){
         const x = document.getElementById("menu-overview")
         x.addEventListener("click", this.noteIndexView.bind(this))
-    }
-    menuProfileListner(){
-        const x = document.getElementById("menu-profile")
-        x.addEventListener("click", this.userShowView.bind(this))
     }
     menuCreateNoteListner(){
         const x = document.getElementById("menu-create-note")
