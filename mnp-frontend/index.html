@@ -13,7 +13,9 @@
         <h1>Welcome!</h1>
         <p>"It is a pleasure to be meeting you! Mood in progress is a javascript frontend and ruby rails api backend SPA. Please login or sign up! You can create entries to hold information. The designed purpose is to be a mood journal but feel free to use it in the way that is most applicable to you!"</p>
       </div>
-        <div class="users-container" id="users-container" style="display: block;">
+      <div class="overview logged-in-visible" id="overview">
+      </div>
+        <div class="users-container" id="users-container">
           <div class="l-user logged-out-visible" id="l-user">
             <h1>SignIn</h1>
             <form id="login-user-form">
@@ -29,18 +31,16 @@
               <input type="submit" value="SignUp">
             </form>
           </div>
+          <div class="r-user __TO-BE-ADDED" id="r-user">
+          </div>
+          <div class="u-user __TO-BE-ADDED" id="u-user">
+          </div>
         </div>
         <div class="notes-container logged-in-visible" id="notes-container">
-          <div class="overview" id="overview">
-            <div class="index-note" id="index-note">
-              <h1>Overview</h1>
-            </div>
-            <div class="index-note-list" id="index-note-list">
-            </div>
+          <div class="i-notes logged-in-visible" id="i-notes">
           </div>
-          <div class="c-note" id="c-note">
+          <div class="c-note logged-in-visible" id="c-note">
             <h1>Create A Entry</h1>
-            <ul>
             <form id="c-note-form">
               <li></li><input type="text" name="create-note-title" id="create-note-title" placeholder="Title"></li>
               <li></li><textarea name="message" rows="10" cols="80" id="create-note-content" placeholder="Content"></textarea></li>
@@ -49,9 +49,9 @@
             </form>
           </ul>
           </div>
-          <div class="r-note" id="r-note">
+          <div class="r-note logged-in-visible" id="r-note">
           </div>
-          <div class="u-note" id="u-note">
+          <div class="u-note __TO-BE-ADDED" id="u-note">
             <h1>Update Note</h1>
             <form id="update-note-form">
               <input type="text" name="update-note-title" id="update-note-title" placeholder="Title">
@@ -59,13 +59,6 @@
               <input class="userId" type="hidden" name="current_user_id" id="current_userId" value="">
               <input type="submit" value="Update">
             </form>
-          </div>
-          <div class="d-note" id="d-note">
-            <h1>Delete Note</h1>
-            <p>Are you sure?</p>
-            <input class="userId" type="hidden" name="current_user_id" id="current_user_id" value="">
-            <input class="noteId" type="hidden" name="noteId" id="note_id" value="">
-              <input type="submit" value="Delete">
           </div>
         </div>
       </div>
@@ -90,8 +83,11 @@
       <a class="menu_item logged-in-visible" id="menu-overview" href="#">
         <span class="menu_text"  id="menu-four">Overview</span>
       </a>
-      <a class="menu_item logged-in-visible" id="menu-create-note" href="#">
+      <a class="menu_item logged-in-visible" id="menu-c-note" href="#">
         <span class="menu_text" id="menu-six">Create Notes</span>
+      </a>
+      <a class="menu_item __TO-BE-ADDED" id="menu-s-note" href="#">
+        <span class="menu_text" id="menu-six">Note</span>
       </a>
     </nav>
   </sidebar>
