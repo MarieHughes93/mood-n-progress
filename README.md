@@ -20,11 +20,11 @@ To use this app, clone this repo and execute:
 
 ## Contributing
 
-Bug reports and pull requests are welcome. Feel free to make any changes you feel fit to do. If you do please commit clearly as I would like to understand what improvements could be made. https://github.com/kchohee/moodnprogress This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome. Feel free to make any changes you feel fit to do. If you do please commit clearly as I would like to understand what improvements could be made. https://github.com/MarieHughes93/moodnprogress This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 ## Authors
 
-* **Cho (Marie) Hughes** [MoodNProgress](https://github.com/MoodNProgress)
+* **Marie Hughes** [MoodNProgress](https://github.com/MarieHughes93/MoodNProgress)
 
 ## License
 
